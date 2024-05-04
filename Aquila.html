@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AQUILA</title>
+    <link rel="stylesheet" href="Aquila.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/msdropdown/dd.css" />
+
+    <script src="js/jquery/jquery-1.8.2.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $("#myForm").submit(function(event) {
+            // Prevent default form submission
+            event.preventDefault();
+    
+            // Check if first name is empty
+            var firstName = $("#firstname").val().trim();
+            if (firstName === "") {
+                alert("Please enter your first name.");
+                return;
+            } else if (!isValidName(firstName)) {
+                alert("First name cannot contain numeric values.");
+                return;
+            }
+    
+            // Check if last name is empty
+            var lastName = $("#lastname").val().trim();
+            if (lastName === "") {
+                alert("Please enter your last name.");
+                return;
+            } else if (!isValidName(lastName)) {
+                alert("Last name cannot contain numeric values.");
+                return;
+            }
+    
+            // Check if email is empty and in correct format
+            var email = $("#email").val().trim();
+            if (email === "") {
+                alert("Please enter your email.");
+                return;
+            } else if (!isValidEmail(email)) {
+                alert("Please enter a valid email address.");
+                return;
+            }
+    
+            // Check if idea is empty
+            var idea = $("#idea").val().trim();
+            if (idea === "") {
+                alert("Please describe your idea.");
+                return;
+            }
+    
+            // Check if model is empty and has a valid file extension
+            var model = $("#model").val().trim();
+            if (model === "") {
+                alert("Please upload a model url.");
+                return;
+            }
+    
+            // Check if country is not selected
+            var country = $("#inputState").val();
+            if (country === "Choose...") {
+                alert("Please select your country.");
+                return;
+            }
+          // Check if checkbox is checked
+        if (!$("#gridCheck").is(":checked")) {
+          alert("Please agree to the terms and conditions.");
+          return;
+      }
+            // If all validations pass, submit the form
+            $(this).unbind('submit').submit();
+        });
+    });
+    
+    // Function to validate email format
+    function isValidEmail(email) {
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+    
+    // Function to validate name (does not contain numeric values)
+    function isValidName(name) {
+        var nameRegex = /^[^\d]+$/; // Regex to ensure no numeric values
+        return nameRegex.test(name);
+    }
+    
+  </script>
+  <script>
+    function ask() {
+     alert('Continue And See The Full Painting ')
+    }
+  </script>
+<script>
+$(document).ready(function() {
+$("#inputState").msDropdown();
+})
+</script>
+
+<style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            font-size: 1rem;
+            font-weight: 400;
+        }
+
+        form {
+            margin: 40px;
+            padding: 20px;
+        }
+
+        .image-right , .image-left{
+            display: flex;
+            height: 100%;
+        }
+
+        .image-right img{
+            margin: 50px;
+            border-radius: 10px;
+        }
+        
+        .image-left img {
+          height: 100%;
+          margin: 0;
+      }
+      #me2 {
+        display: flex;
+        height: 250px;
+        width: 250px;
+      }
+</style>
+</head>
+<body>
+
+    <header class="header">
+      <nav id="nav-bar" class="nav">
+        <h1 class="web-title">AQUILA GALLERY  <img id="icon" src="resources/painting.png"></h1>
+          <ul class="nav-list">
+              <li><a href="#Home">Home</a></li>
+              <li><a href="#Gallery">Gallery</a></li>
+              <li><a href="#About">About</a></li>
+              <li><a href="#Contribute">Contribute</a></li>
+              <li><a href="#Contact">Contact</a></li>
+          </ul>
+          </nav>
+    </header>
+    <section class="Home" id="Home">
+     <h1 class="w1" id="w1">Welcome Artist</h1>
+    </section>
+    <section class="Gallery" id="Gallery">
+      <div class="flex-container1">
+        <div class="card" style="width: 18rem;">
+          <img src="resources/cactus1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">One Green Cactus</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="cactus1.html" class="btn btn-primary" onClick="ask()" >See More</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="resources/cactus2.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">One Purple Cactus</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="cactus2.html" class="btn btn-primary" onClick="ask()" >See More</a>
+            </div>
+        </div>  
+        <div class="card" style="width: 18rem;">
+              <img src="resources/cactus3.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">One Blue Cactus</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="cactus3.html" class="btn btn-primary" onClick="ask()" >See More</a>
+              </div>
+         </div> 
+      </div>
+      <div class="flex-container2">
+        <div class="card" style="width: 18rem;">
+          <img src="resources/constellation Sky.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">The Constellation</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="sky1.html" class="btn btn-primary" onClick="ask()">See More</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="resources/dark night.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">The Dark Night</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="sky2.html" class="btn btn-primary" onClick="ask()">See More</a>
+            </div>
+        </div>  
+        <div class="card" style="width: 18rem;">
+              <img src="resources/horizon.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">A Purple Sky</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="sky3.html" class="btn btn-primary" onClick="ask()" >See More</a>
+              </div>
+        </div> 
+      </div>
+      <div class="flex-container3">
+        <div class="card" style="width: 18rem;">
+          <img src="resources/theLady.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">The Lady</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="lady.html" class="btn btn-primary" onClick="ask()">See More</a></div>
+          </div> 
+          <div class="card" style="width: 18rem;">
+            <img src="resources/medina1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">La Medina</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="medina.html" class="btn btn-primary" onClick="ask()">See More</a></div>
+            </div> 
+          <div class="card" style="width: 18rem;">
+          <img src="resources/2m.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">The Scetch</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="sketch.html" class="btn btn-primary" onClick="ask()">See More</a></div>
+          </div> 
+        </div>  
+      <div class="flex-container4">
+        <div class="card" style="width: 18rem;">
+          <img src="resources/oncle.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">A Memory</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="oncle.html" class="btn btn-primary" onClick="ask()" >See More</a>
+          </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <img src="resources/galaxy.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">The Galaxy</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="galaxy.html" class="btn btn-primary" onClick="ask()" >See More</a>
+            </div>
+        </div>  
+        <div class="card" style="width: 18rem;">
+              <img src="resources/medina2.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">La Medina</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="medina2.html" class="btn btn-primary" onClick="ask()" >See More</a>
+              </div>
+         </div> 
+
+      </div>
+    </section>
+    <section id="About">
+      <div>
+        <h1 class="aboutA">
+            About The Artist
+          </h1>
+          <div id="me1">
+            <p class="artist-desc">
+              Meet Farah, a student with a heart ablaze with artistic passion, brings her world to life through the magic of paint. Since childhood, she has poured her emotions onto canvases, creating vibrant stories with every stroke. Now, driven by a desire to share her gift with the world, Farah sets her sights on the online art community. With a website, she hopes to connect with art enthusiasts seeking unique and inspiring pieces, allowing them to experience the world through her passionate lens.
+            </p>
+          </div>
+          <div id="me2">
+            <img id="me" src="resources/avatar.jpg" >
+          </div>
+         
+      </div>
+    </section>
+    <section id="Contribute" background-color= #008080 >
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <form id="myForm" action="http://localhost/projectWeb/project.php" method="post">
+                    <h2 id="F1">What do you think i should paint next!</h2>
+                    <h5 id="F2"><small>Let's know you First</small></h5> 
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <label for="firstname">First Name:</label>
+                          <input type="text" class="form-control" name="firstname" id="firstname" placeholder="Enter Your First Name ">
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="lastname">Last Name:</label>
+                          <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Enter Your Last Name">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="Email" class="form-control" id="email" name="email" placeholder="Enter Your Email">
+                      </div>
+                      <div class="form-group">
+                        <label for="idea">Idea: </label>
+                        <input type="textArea" class="form-control" id="idea" name="idea" placeholder="Desribe Your Idea">
+                      </div>
+                      <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <label for="model">Model:</label>
+                          <input type="text" class="form-control" id="model"  name="model" style="height: 50px;" >
+                        </div>
+                        <div class="form-group col-md-4">
+                          <label for="inputState">Country</label>
+                          <select id="inputState" class="form-control" name="inputState" style="width: 200px; height: 50px;">
+                            <option selected>Choose...</option>
+                            <option value="ad" data-imagecss="flag flag-ad" data-title="Andorra">Andorra</option>
+                            <option value="ae" data-imagecss="flag flag-ae" data-title="United Arab Emirates">United Arab Emirates</option>
+                            <option value="af" data-imagecss="flag flag-af" data-title="Afghanistan">Afghanistan</option>
+                            <option value="ag" data-imagecss="flag flag-ag" data-title="Antigua and Barbuda">Antigua and Barbuda</option>
+                            <option value="ai" data-imagecss="flag flag-ai" data-title="Anguilla">Anguilla</option>
+                            <option value="pl" data-imagecss="flag flag-ai" data-title="Palestine">Palestine</option>
+                            <option value="fr" data-imagecss="flag flag-ai" data-title="france">France</option>
+                            <option value="al" data-imagecss="flag flag-ai" data-title="Algeria">Algeria</option>
+                            <option value="tn" data-imagecss="flag flag-ai" data-title="Tunisia">Tunisia</option>
+                            <!-- Add more options as needed -->
+                        </select>
+                        
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="gridCheck">
+                          <label class="form-check-label" for="gridCheck">
+                            Please Agree To Terms And Conditions
+                          </label>
+                        </div>
+                      </div>
+                      <button  type="submit" id="submit" name ="submit" class="btn btn-primary">Submit</button>
+                      <button  type="reset" name ="cancel" class="btn btn-primary">Cancel</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <!-- Image to be placed here -->
+                <div class="image-right">
+                    <img src="resources/painter-supplies-scaled.jpg" alt="Supplies Image" width="700" right="50dp" >
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <section id="Artists" background-color= #008080 >
+      <div class="container">
+          <div class="row">
+            <div class="col-md-62" padding-top="50px">
+              <!-- Image to be placed here -->
+              <div class="image-left">
+                  <img src="resources/van.jpg" alt="Supplies Image" width="400" >
+            </div>
+            </div>
+              <div class="col-md-63" >
+                  <h1 style="margin-bottom: 30px;">Van Gogh <img src="resources/vincent-van-gogh.png"></h1>
+                  <p>Vincent van Gogh (1853–1890), the Dutch post-impressionist maestro, defied adversity, crafting over 2,000 works amidst the turmoil of mental anguish and destitution. His masterpieces, from the celestial swirls of "Starry Night" to the sun-kissed radiance of "Sunflowers," resonate with an unparalleled vibrancy and emotional depth. Though his life was tragically brief, Van Gogh's artistic legacy remains a luminous beacon, inspiring boundless creativity and fortitude in the hearts of all who behold his transcendent oeuvre.</p>
+              </div>
+            
+          </div>
+      </div>
+    </section>  
+    <section id="Contact" >
+        <div class="shape" >
+          <h1 class="contact-title">Contact Us </h1>
+          <table >
+            <tr>
+              <th><a href="mathlouthifarah1@gmail.com"><img src="resources/social.png"></a></th>
+              <th><a href="https:www.linkedin.com/in/farah-mathlouthi"><img src="resources/linkedin.png"></a></th>
+              <th><a href="https://www.facebook.com/profile.php?id=100014550124440&sk=about_contact_and_basic_info"><img src="resources/facebook (1).png"></a></th>
+              <th><a href="https://www.instagram.com/_farah__mathlouthi/"><img src="resources/instagram.png"></a></th>
+            </tr>
+          </table>
+        </div>
+    </section>
+    <section id="Contact-f" >
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label"><p style="margin-left: 50px;">“I dream my painting and I paint my dream.”<br>
+          <small>― Vincent Willem van Gogh</small></p></label>
+      </div>
+    </section>
+    
+<script>
+  let lastScrollTop = 0;
+  const navbar = document.getElementById("nav-bar");
+  window.addEventListener("scroll", () => {
+      let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+      if (currentScroll > lastScrollTop) {
+          // Scrolling down
+          navbar.style.top = "-100px";
+      } else {
+          // Scrolling up
+          navbar.style.top = "0";
+      }
+      lastScrollTop = currentScroll;
+  });
+</script>
+  </body>
+  </html>
+
+
+  

@@ -1,0 +1,269 @@
+/* Resetting default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body  {
+    font-family: "Playfair Display", serif;
+    margin: 50px;
+}
+
+.Home {
+    background-image: url('resources/temp_d0740616-f692-4942-9fe2-b7c68b87384e.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+}
+.web-title, .form-label {
+    color: white;
+    cursor: pointer;
+    margin-left: 20px;
+    font-weight: bold;
+}
+#icon {
+    margin-bottom: 7px;
+}
+/* Header styles */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 11%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #89cff0;
+    z-index: 9999;
+    margin: auto;
+}
+
+.nav-list {
+    display: flex;
+    margin-right: 100px;
+    list-style: none;
+    gap: 10px;
+    text-transform: uppercase;
+}
+
+.nav-list li {
+    margin-right: 10px;
+    
+}
+
+.nav-list li a {
+    color: white;
+    text-decoration: none;
+}
+.artist-desc {
+    font-size: 1.1rem; 
+}
+.w1 {
+    color: white;
+    position: absolute;
+    font-size: 3rem;
+    color: white;
+    top: 80%;
+}
+
+#Artists {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background-color: #51a5aa;
+}
+#About {
+    background-image: url('resources/90924.jpg');
+    background-size: cover;
+    background-position: center;
+    color: rgb(21, 111, 207);
+    padding: 150px;
+    width: 100%;
+    height: 100vh;
+}
+#Contact {
+
+    padding-top: 70px;
+    background-color: #aad3d1;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    text-align: center; 
+    position: relative;
+  }
+
+#Contact-f {
+    background-image: url('resources/starry\ nihght.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+    clear: both; /* to Clear any floating elements above it */
+    height: 100vh;
+} 
+
+#Contribute .form-card {
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 100px;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+}
+#Gallery {
+    background-size: cover;
+    background-position: center;
+    height: auto; 
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.input {
+    display: block;
+    padding-top: 0.5rem;
+}
+
+.input label {
+    display: inline-block;
+}
+
+.input input[type="text"],
+.input input[type="email"] {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input input[type="submit"],
+.input input[type="cancel"] {
+    width: 40%;
+    margin: 0.5em auto;
+    height: 2em;
+    font-size: 1.1rem;
+    background-color: rgb(89, 181, 178);
+    border: none;
+    border-radius: 10px;
+    color: white;
+}
+
+/* Gallery */
+.flex-container1,
+.flex-container2,
+.flex-container3,
+.flex-container4 {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.card {
+    margin: 0 20px;
+    width: 18rem;
+    border: 1px solid #ccc;
+}
+
+.card-img-top {
+    max-width: 100%;
+    height: 65%;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.card-text {
+    color: #666;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+/* Contact section */
+.contact-title {
+    color: #1e7865;
+    font-size: 3rem;
+    font-weight: bold;
+}
+.shape {
+    padding: 50px;
+}
+
+table {
+    border-collapse: collapse;
+    display: flex;
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+    height: 50vh; /* Set height to viewport height to center vertically */
+}
+
+th {
+    font-weight: bold;
+}
+
+th:hover {
+    background-color: #1e7865;
+}
+
+th,
+td {
+    padding: 80px;
+    border: 2px solid #1e7865;
+}
+
+
+.mb-3 {
+    background-color: #3434a5;
+    padding: 20px;
+    margin: 100px 200px;
+    align-items: center;
+    top: 50%;
+    border-radius: 20px;
+}
+
+
+.form-label {
+    color: white;
+    font-size: 1.2rem;
+}
+
+#F1 {
+    color: #24A0ED;
+}
+
+#F2 {
+    color:  #325d45;
+}
+
+.col-md-62 {
+    margin: 0 50px;
+    padding: 0 30px;
+}
+.col-md-63 {
+    margin: 10px;
+    margin-top: 90px;
+    width: 500px;
+}
+.col-md-63 h1{
+   color: #154345;
+}
+.col-md-63 p {
+    color: white;
+    font-size: 1.2rem;
+}
